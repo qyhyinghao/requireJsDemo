@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="./assets/lib/require/require.js"></script>
+    <script>
+
+        require.config({
+            //配置用户定义的模块从哪个文件夹开始找
+            baseUrl:'./assets',
+            //配置短名字： 对应每一个js文件的路径
+            paths:{
+                moduleA:'modules/moduleA/moduleA',
+                moduleB:'modules/moduleB/moduleB',
+                moduleC:'modules/moduleC/moduleC',
+                jquery:'lib/jquery/jquery-3.1.0',
+                cookie:'lib/cookie/jquery.cookie'
+            }
+        });
+        require(['moduleA']);
+    </script>
+      
+</body>
+</html>
